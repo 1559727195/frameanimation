@@ -2,6 +2,7 @@ package com.massky.frameanimation;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -29,8 +30,11 @@ public class BicycleView extends View {
 
     public BicycleView(Context context) {
         super(context);
+        mBicycle = ((BitmapDrawable) getResources().getDrawable(
+                R.drawable.ic_launcher_background
+        )).getBitmap();
+        //
 
-        
     }
 
     public BicycleView(Context context, @Nullable AttributeSet attrs) {
