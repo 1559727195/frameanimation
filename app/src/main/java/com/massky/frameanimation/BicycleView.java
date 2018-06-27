@@ -37,7 +37,7 @@ public class BicycleView extends View {
     public BicycleView(Context context) {
         super(context);
         mBicycle = ((BitmapDrawable) getResources().getDrawable(
-                R.drawable.ic_launcher_background
+                R.drawable.qq
         )).getBitmap();
         //
         mAnimationAlpha = new AlphaAnimation(
@@ -95,24 +95,23 @@ public class BicycleView extends View {
 
         switch (keyCode) {
             case KeyEvent.KEYCODE_DPAD_UP:
-
+                startAnimation(mAnimationScale);
                 break;
             case KeyEvent.KEYCODE_DPAD_DOWN:
-
+                startAnimation(mAnimationTranslate);
                 break;
             case KeyEvent.KEYCODE_DPAD_LEFT:
-
+                startAnimation(mAnimationAlpha);
                 break;
             case KeyEvent.KEYCODE_DPAD_RIGHT:
-
+                startAnimation(mAnimationRotate);
                 break;
             case KeyEvent.KEYCODE_DPAD_CENTER:
-
+                startAnimation(as);
                 break;
 
         }
 
-
-        return super.onKeyUp(keyCode, event);
+        return true;
     }
 }
